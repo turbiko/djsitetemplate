@@ -12,10 +12,29 @@ Delete the line below if you're just getting started and want to remove the welc
 {% endblock extra_css %}
 
 {% block content %}
+{% load i18n wagtailcore_tags %}
+<header class="header">
+    <div class="logo">
+        <a href="/">HOME</a>
+    </div>
+        <div class="logo">
+        <a href="todo/">TODO</a>
+    </div>
+</header>
+<main class="main">
+    <div class="main-text">
+        <h1>{% trans "Welcome to my site!" %}</h1>
+        <p>{% trans 'Hi!' %}</p>
+    </div>
+</main>
+<footer class="footer" role="contentinfo">
+    <a class="option option-three" href="{% url 'wagtailadmin_home' %}">
+        <div>
+            <h2>{% trans "Admin Interface" %}</h2>
+            <p>{% trans "Create your user first!" %}</p>
+        </div>
+    </a>
+</footer>
 
-{% comment %}
-Delete the line below if you're just getting started and want to remove the welcome screen!
-{% endcomment %}
-{% include 'home/welcome_page.html' %}
 
 {% endblock content %}
