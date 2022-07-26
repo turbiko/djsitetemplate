@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     "todo.apps.TodoConfig",
+    "assets.apps.AssetsConfig",
+    "locations.apps.LocationsConfig",
+    "places.apps.PlacesConfig",
+    "profiles.apps.ProfilesConfig",
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -93,7 +97,19 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    }
+    },
+    "filmbase": {
+        "ENGINE": "mssql",
+        "NAME": "FilmUA_ManagementBase",
+        "USER": "UserIT",
+        "PASSWORD": "SqLUserIT",
+        "HOST": "10.11.100.28",
+        "PORT": "1433",
+        "OPTIONS": {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'isolation_level': 'READ UNCOMMITTED',
+        },
+    },
 }
 
 
@@ -168,9 +184,5 @@ WAGTAILSEARCH_BACKENDS = {
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-WAGTAILADMIN_BASE_URL = "http://example.com"
+WAGTAILADMIN_BASE_URL = "https://inventory.film.ua"
 
-
-# WAGTAIL_FRONTEND_LOGIN_TEMPLATE = 'login.html'
-# WAGTAIL_FRONTEND_LOGIN_URL = '/accounts/login/'
-# PASSWORD_REQUIRED_TEMPLATE = 'password_required.html'

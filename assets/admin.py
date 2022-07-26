@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import AssetItem, AssetItem1C
 
-# Register your models here.
+
+admin.site.register(AssetItem)
+admin.site.register(AssetItem1C)

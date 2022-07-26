@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import LocationLinks, Location1C
 
-# Register your models here.
+
+admin.site.register(LocationLinks)
+admin.site.register(Location1C)

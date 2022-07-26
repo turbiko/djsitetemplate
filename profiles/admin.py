@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import UserProfile, Person1C
 
-# Register your models here.
+
+# class UserProfileAdmin(admin.ModelAdmin):
+#     readonly_fields = ('created',)
+
+admin.site.register(UserProfile)
+admin.site.register(Person1C)
