@@ -1,2 +1,2 @@
 # djsite
- like django site template
+ Wagtail site 
