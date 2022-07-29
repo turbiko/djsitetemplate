@@ -47,14 +47,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'crispy_forms',
 
-    "todo.apps.TodoConfig",
-    "assets.apps.AssetsConfig",
-    "locations.apps.LocationsConfig",
-    "places.apps.PlacesConfig",
-    "profiles.apps.ProfilesConfig",
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
