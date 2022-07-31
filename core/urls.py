@@ -7,13 +7,16 @@ from wagtail import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
+from home import views as products_views
 
 urlpatterns = [
     path("wrkguhbdk-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
-
+    path('shop/', products_views.shop, name="shop"),
+    path('about/', products_views.about, name="about"),
+    path('contact/', products_views.contact, name="contact"),
 ]
 
 
